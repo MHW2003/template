@@ -2,48 +2,46 @@
 \providecommand{\tightlist}{
 \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usetheme{Madrid}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
 \title{Title}
 \author{Author}
 \date{\today}
 \begin{document}
 \maketitle
+\begin{frame}{Multicolumn Block}
 
-\begin{frame}{List}
+\begin{multicols}{2}
+LaTeX is a high-quality typesetting system; it includes features
+designed for the production of technical and scientific documentation.
+LaTeX is the de facto standard for the communication and publication of
+scientific documents. LaTeX is available as
+\href{https://www.latex-project.org/lppl/}{free software}. You don't
+have to pay for using LaTeX, i.e., there are no license fees, etc. But
+you are, of course, invited to support the maintenance and development
+efforts through a \href{https://www.tug.org/donate.html}{donation to the
+TeX Users Group (choose LaTeX Project contribution)} if you are
+satisfied with LaTeX.
 
-{
-\begin{itemize}
-\tightlist
-\item
-  Focus on contents, save time in formatting
-\item
-  Determine the optimal layout
-\item
-  Manage internal references, citations efficiently
-\item
-  Handle equations and graphs
-\end{itemize}
-}
+\end{multicols}
+\end{frame}
+\begin{frame}{Table}
+
+\begin{table}
+\caption{Research Result}
+\begin{tabular}{|l|l|l|l|}\hline
+\multirow{2}{*}{}&\multicolumn{2}{|l|}{A}&\multirow{2}{*}{Red Eyes}\\\cline{2-2}\cline{3-3}
+\multirow{2}{*}{ }&height&weight&\multirow{2}{*}{ }\\\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}
+Males&1.9&0.003&40\\\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}
+Females&1.7&0.002&43\\\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}
+\end{tabular}
+\end{table}
 
 \end{frame}
+\begin{frame}{Math Equation}
 
-\begin{frame}{Block}
-\begin{block}{Blue}
-{
-Blue box
-}
-\end{block}
-
-\begin{alertblock}{Red}
-{
-Red box
-}
-\end{alertblock}
-
-\begin{exampleblock}{Green}
-{
-Green box
-}
-\end{exampleblock}
+\[\ \int_a^bx^2dx\]
 \end{frame}
-
 \end{document}
