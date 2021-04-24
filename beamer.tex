@@ -3,6 +3,7 @@
 \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usetheme{Madrid}
 \usepackage{multirow}
+\usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
@@ -11,13 +12,36 @@
 \date{\today}
 \begin{document}
 \maketitle
+\begin{frame}{New Block Type}
+
+{
+\begin{enumerate}
+\item
+  Multicolumn
+\item
+  Table
+\item
+  Math Equation
+\item
+  Image
+\end{enumerate}
+}
+
+\end{frame}
 \begin{frame}{Multicolumn Block}
 
+\begin{block}{Paragraph Block}
+
+{
+\textbf{LaTeX} is a \underline{high-quality typesetting system}; it
+includes features designed for the production of technical and
+scientific documentation.
+}
+
+\end{block}
 \begin{multicols}{2}
-LaTeX is a high-quality typesetting system; it includes features
-designed for the production of technical and scientific documentation.
-LaTeX is the de facto standard for the communication and publication of
-scientific documents. LaTeX is available as
+LaTeX is the \emph{de facto} standard for the communication and
+publication of scientific documents. LaTeX is available as
 \href{https://www.latex-project.org/lppl/}{free software}. You don't
 have to pay for using LaTeX, i.e., there are no license fees, etc. But
 you are, of course, invited to support the maintenance and development
@@ -27,21 +51,26 @@ satisfied with LaTeX.
 
 \end{multicols}
 \end{frame}
-\begin{frame}{Table}
+\begin{frame}{Table and Equation}
 
-\begin{table}
-\caption{Research Result}
+\begin{alertblock}{Table}
+
+\begin{table}[h]\centering
 \begin{tabular}{|l|l|l|l|}\hline
-\multirow{2}{*}{}&\multicolumn{2}{|l|}{A}&\multirow{2}{*}{Red Eyes}\\\cline{2-2}\cline{3-3}
-\multirow{2}{*}{ }&height&weight&\multirow{2}{*}{ }\\\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}
-Males&1.9&0.003&40\\\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}
-Females&1.7&0.002&43\\\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}
+\multirow{2}{*}{}&\multicolumn{2}{|l|}{Average}&Red Eyes\\\cline{2-2}\cline{3-3}\cline{4-4}
+\multirow{2}{*}{ }&\multicolumn{2}{|l|}{height}&\\\hline
+Males&1.9&0.003&40\\\hline
+Females&1.7&0.002&43\\\hline
 \end{tabular}
+\caption{Research Result}
 \end{table}
 
-\end{frame}
-\begin{frame}{Math Equation}
+\end{alertblock}
+\begin{exampleblock}{Equation}
 
-\[\ \int_a^bx^2dx\]
+\end{exampleblock}
+\end{frame}
+\begin{frame}{Image Block}
+
 \end{frame}
 \end{document}
